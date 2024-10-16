@@ -1,0 +1,11 @@
+spring:
+  #指定当微服务名称(别的工程可以通过这个访问这个工程)
+  application:
+    name: consumer-depart
+#指定服务注册中心的名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    instance-id: consumer-eureka

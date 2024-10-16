@@ -1,0 +1,5 @@
+### 删除指定id的用户
+DELETE http://localhost:8080/consumer/depart/1
+
+### 获取指定id的用户信息
+GET http://localhost:8080/consumer/depart/2

@@ -1,0 +1,46 @@
+spring:
+  #数据源
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.99.128:3306/demo01SpringCloud?serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    # 指定在控制台是否现实 SQL
+    show-sql: true
+    # 指定是否在spring 容器启动创建表,默认为false
+    generate-ddl: true
+    # 指定应用重启后不重新更新表内容
+    hibernate:
+      ddl-auto: none
+
+  #指定当微服务名称(别的工程可以通过这个访问这个工程)
+  application:
+    name: provider-depart
+
+server:
+  port: 8001
+
+# 配置日志
+logging:
+  pattern:
+    console: level-%level %msg%n
+    # 配置 指定 文件下 或 指定类 的日志级别
+  level:
+    root: info
+    org.hibernate: info
+    # 在show-sql为true 时 现实 SQL 中的动态参数值
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    # 在show-sql为true 时显示查询结果
+    org.hibernate.hql.internal.ast.exec.BasicExecutor: trace
+    com.abc: debug
+
+#配置eureka 连接注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  #实例名称 id，如多台生产者工程不要填写 实例名称，不填写是为了防止名称冲突
+  instance:
+    instance-id: provider-eureka-01
