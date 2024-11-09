@@ -1,13 +1,14 @@
-package org.lkx;
-
+package com.atguigu.cloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@EnableDiscoveryClient
 @SpringBootApplication
-public class ApplicationConsumer8080 {
-    public static void main(String[] args) {
-        SpringApplication.run(ApplicationConsumer8080.class, args);
+@EnableDiscoveryClient
+public class Main80
+{
+    public static void main(String[] args)
+    {
+        SpringApplication.run(Main80.class,args);
     }
 }

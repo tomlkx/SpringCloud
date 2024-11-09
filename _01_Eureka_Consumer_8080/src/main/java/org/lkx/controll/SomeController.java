@@ -1,7 +1,6 @@
 package org.lkx.controll;
 
 import org.lkx.dom.Depart;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
