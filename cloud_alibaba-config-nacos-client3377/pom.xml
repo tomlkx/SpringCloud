@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.atguigu.cloud</groupId>
+        <artifactId>SpringCloud</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>cloud_alibaba-config-nacos-client3377</artifactId>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!-- 引入Spring Cloud Bootstrap依赖，用于支持外部化配置 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId> <!-- 指定依赖的groupId -->
+            <artifactId>spring-cloud-starter-bootstrap</artifactId> <!-- 指定依赖的artifactId -->
+        </dependency>
+        <!-- 引入Spring Cloud Alibaba Nacos Config依赖，用于配置中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId> <!-- 指定依赖的groupId -->
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId> <!-- 指定依赖的artifactId -->
+        </dependency>
+        <!-- 引入Spring Cloud Alibaba Nacos Discovery依赖，用于服务发现 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId> <!-- 指定依赖的groupId -->
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId> <!-- 指定依赖的artifactId -->
+        </dependency>
+        <!-- 引入Spring Boot Web依赖，用于构建Web应用 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId> <!-- 指定依赖的groupId -->
+            <artifactId>spring-boot-starter-web</artifactId> <!-- 指定依赖的artifactId -->
+        </dependency>
+        <!-- 引入Spring Boot Actuator依赖，用于监控和管理 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId> <!-- 指定依赖的groupId -->
+            <artifactId>spring-boot-starter-actuator</artifactId> <!-- 指定依赖的artifactId -->
+        </dependency>
+        <!-- 引入Lombok依赖，用于简化Java代码 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId> <!-- 指定依赖的groupId -->
+            <artifactId>lombok</artifactId> <!-- 指定依赖的artifactId -->
+            <optional>true</optional> <!-- 标记为可选依赖 -->
+        </dependency>
+    </dependencies>
+</project>

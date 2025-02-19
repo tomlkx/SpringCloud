@@ -1,0 +1,23 @@
+# 配置服务器端口为83
+server:
+  port: 83
+
+spring:
+  application:
+    # 应用名称，用于服务注册与发现
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        # Nacos服务器地址，用于服务注册与发现
+        server-addr: localhost:8848
+
+# 定义服务URL，指定消费者将要访问的微服务名称和地址
+service-url:
+  # Nacos用户服务的URL，指向提供者的服务名称
+  nacos-user-service: http://nacos-payment-provider
+
+# 激活Sentinel对Feign的支持
+feign:
+  sentinel:
+    enabled: true
